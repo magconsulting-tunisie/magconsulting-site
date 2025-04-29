@@ -36,7 +36,7 @@ function Home() {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
     // Set page title
-    document.title = "MAG Consulting - Expertise en finances publiques et gestion";
+    document.title = "MAG Consulting - Tunisie";
   }, []);
 
   return (
