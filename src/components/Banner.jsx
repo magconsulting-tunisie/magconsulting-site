@@ -41,7 +41,7 @@ function Banner() {
           </div>
           <div className="contact-text">
             <div className="contact-label">Mail</div>
-            <div className="contact-value">magconsulting@gmail.com</div>
+            <div className="contact-value">magconsulting17@gmail.com</div>
           </div>
         </div>
       </div>
