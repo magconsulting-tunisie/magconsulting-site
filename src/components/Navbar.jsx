@@ -11,27 +11,21 @@ function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    const handleClickOutside = (event) => {
-      if (isMobileMenuOpen && 
-          !event.target.closest('.mobile-menu') && 
-          !event.target.closest('.navbar-mobile-toggle')) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
     window.addEventListener('scroll', handleScroll);
-    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isMobileMenuOpen]);
+  }, []);
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -65,15 +59,20 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`} 
-           onClick={toggleMobileMenu}></div>
+      <div 
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`} 
+        onClick={closeMobileMenu}
+      ></div>
       
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+      <div 
+        className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`} 
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="mobile-menu-links">
           <NavLink 
             to="/" 
             className="mobile-link" 
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
             end
           >
             Accueil
@@ -81,21 +80,21 @@ function Navbar() {
           <NavLink 
             to="/services" 
             className="mobile-link" 
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
           >
             Services
           </NavLink>
           <NavLink 
             to="/achievements" 
             className="mobile-link" 
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
           >
             Réalisations clés 
           </NavLink>
           <NavLink 
             to="/contact" 
             className="mobile-link" 
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
           >
             Contact
           </NavLink>

@@ -103,11 +103,21 @@
   color: var(--text-dark);
   transition: all 0.3s ease;
   padding: 0.5rem;
+  z-index: 1001; /* Ensure button is above overlay and menu */
+  position: relative;
 }
 
 .navbar-mobile-toggle:hover {
   color: var(--primary-color);
   transform: rotate(90deg);
+}
+
+.navbar-mobile-toggle svg {
+  color: var(--text-dark); /* Ensure icon is visible */
+}
+
+.navbar-mobile-toggle svg:hover {
+  color: var(--primary-color);
 }
 
 /* Mobile Menu */
@@ -121,7 +131,8 @@
   z-index: 998;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: pointer;
 }
 
 .mobile-menu-overlay.active {
