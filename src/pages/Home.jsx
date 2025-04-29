@@ -8,7 +8,7 @@ import bureau2 from '../assets/bureau2.png';
 import bureau3 from '../assets/bureau3.png';
 import bannera from '../assets/bannera.jpg';
 import bannerb from '../assets/bannerb.jpeg';
-import './home.css';
+import './Home.css';
 
 // Animation variants
 const fadeIn = {
