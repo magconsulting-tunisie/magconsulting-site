@@ -1,0 +1,168 @@
+/* Services Page Styles */
+.services-wrapper {
+    background: var(--background-dark);
+    color: var(--text-dark);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Hero Section */
+  .services-hero {
+    background: linear-gradient(to right, rgba(26, 42, 58, 0.9), rgba(77, 166, 255, 0.8)), 
+                url('../assets/services-hero.jpg') center/cover no-repeat;
+    padding: 120px 50px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 50px;
+  }
+  
+  .services-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .services-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .services-hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Services Grid */
+  .services-grid-section {
+    padding: 80px 50px;
+    background: var(--background-darker);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .service-card {
+    background-color: var(--card-dark);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid rgba(77, 166, 255, 0.1);
+    text-align: center;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--primary-color);
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .service-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Methodology Section */
+  .methodology-section {
+    padding: 80px 50px;
+    background: var(--background-dark);
+  }
+  
+  .methodology-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .methodology-step {
+    background-color: var(--card-dark);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    position: relative;
+    border-top: 3px solid var(--secondary-color);
+  }
+  
+  .step-number {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .methodology-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .methodology-step p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-hero {
+      padding: 80px 20px;
+    }
+    
+    .services-hero h1 {
+      font-size: 2.2rem;
+    }
+    
+    .services-grid-section,
+    .methodology-section {
+      padding: 60px 20px;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .methodology-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-hero {
+      padding: 60px 15px;
+    }
+    
+    .services-hero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .services-hero p {
+      font-size: 1rem;
+    }
+  }

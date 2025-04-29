@@ -1,0 +1,29 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-blue: #3498db;
+  --light-blue: #e1f0fa;
+  --dark-blue: #2c3e50;
+  --primary-red: #e74c3c;
+  --light-red: #fdedec;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #6c757d;
+  --white: #ffffff;
+  /* From Home.css, Services.css, Achievements.css */
+  --primary-color: #4da6ff;
+  --primary-dark: #2d8bff;
+  --secondary-color: #ff5a5f;
+  --secondary-dark: #e04a50;
+  --text-dark: #f0f0f0;
+  --text-light: #b0b0b0;
+  --background-dark: #1a2a3a;
+  --background-darker: #14212e;
+  --card-dark: #243a4e;
+  --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
