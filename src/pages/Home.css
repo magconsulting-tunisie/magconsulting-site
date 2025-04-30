@@ -2,20 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #4da6ff; /* Light blue */
-  --primary-dark: #2d8bff;
-  --secondary-color: #ff5a5f; /* Coral red */
-  --secondary-dark: #e04a50;
-  --text-dark: #f0f0f0; /* Light text for dark background */
-  --text-light: #b0b0b0;
-  --text-lighter: #909090;
-  --background-dark: #1a2a3a; /* Dark blue background */
-  --background-darker: #14212e;
-  --background-beige: #f5e6d3; /* Beige for accents */
-  --card-dark: #243a4e;
-  --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.2);
-  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.3);
-  --shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.4);
+  --primary-color: #007bff; /* Vibrant blue */
+  --primary-dark: #0056b3;
+  --secondary-color: #ff6f61; /* Bright coral */
+  --secondary-dark: #e65b50;
+  --text-dark: #333333; /* Dark text for light background */
+  --text-light: #666666;
+  --text-lighter: #888888;
+  --background-dark: #f8f9fa; /* Soft white/cream background */
+  --background-darker: #e9ecef;
+  --background-beige: #fdf5e6; /* Light beige for accents */
+  --card-dark: #ffffff;
+  --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.2);
   --border-radius: 12px;
   --transition-speed: 0.3s;
 }
@@ -175,6 +175,7 @@ section:hover .section-title::after {
   align-items: center;
   gap: 40px;
   padding: 70px 30px; /* Adjusted padding for consistency */
+  background: var(--background-dark);
 }
 
 .image-gallery {
@@ -221,7 +222,7 @@ section:hover .section-title::after {
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  
 }
 
 .intervention-section {
@@ -290,7 +291,7 @@ section:hover .section-title::after {
 .intervention-card:hover {
   transform: translateX(5px);
   box-shadow: var(--shadow-medium);
-  background-color: #2a4258;
+  background-color: #e7f3ff;
 }
 
 .intervention-card h3 {
@@ -327,7 +328,7 @@ section:hover .section-title::after {
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+ 
 }
 
 .clients-section .section-content {
@@ -427,30 +428,6 @@ section:hover .section-title::after {
   margin-right: 15px;
 }
 
-.testimonial-container {
-  max-width: 800px;
-  margin: 60px auto 0;
-  position: relative;
-}
-
-.testimonial {
-  background: rgba(36, 58, 78, 0.9);
-  padding: 40px;
-  border-radius: var(--border-radius);
-  border-left: 5px solid var(--secondary-color);
-  position: relative;
-}
-
-.testimonial::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 80px;
-  color: rgba(77, 166, 255, 0.1);
-  font-family: serif;
-  line-height: 1;
-}
 
 blockquote {
   font-style: italic;

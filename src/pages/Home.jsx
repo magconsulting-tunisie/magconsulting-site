@@ -194,15 +194,6 @@ function Home() {
                 </ul>
               </div>
             </div>
-            
-            <div className="testimonial-container">
-              <div className="testimonial">
-                <blockquote>
-                  "MAG Consulting a démontré un professionnalisme exceptionnel et une expertise remarquable lors de notre collaboration. Leur accompagnement a été déterminant dans le succès de notre projet."
-                </blockquote>
-                <cite>- Directeur de projet, Ministère de l'Environnement</cite>
-              </div>
-            </div>
           </div>
         </div>
       </section>
