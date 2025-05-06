@@ -21,25 +21,32 @@ function RhEtCompetences() {
           </nav>
           <div className="course-box-grid">
             <Link to="#" className="course-card">
+              <i className="fas fa-user-plus"></i>
               <h3>Recrutement et intégration</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-chart-bar"></i>
               <h3>Évaluation des performances RH</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-users-cog"></i>
               <h3>GPEC (Gestion prévisionnelle des emplois et compétences)</h3>
             </Link>
-            <Link to="#" className="course-card">
+             <Link to="#" className="course-card">
+              <i className="fas fa-chalkboard-teacher"></i>
               <h3>Formation de formateurs</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-book-open"></i>
               <h3>Ingénierie pédagogique</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-briefcase"></i>
               <h3>Gestion des carrières et mobilité interne</h3>
             </Link>
             <Link to="#" className="course-card">
-              <h3>QVT (Qualité de Vie au Travail) et prévention des RPS (Risques Psychosociaux)</h3>
+              <i className="fas fa-heartbeat"></i>
+              <h3>QVT (Qualité de Vie au Travail) et prévention des RPS</h3>
             </Link>
           </div>
         </div>

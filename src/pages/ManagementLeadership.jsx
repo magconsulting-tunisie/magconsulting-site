@@ -21,27 +21,35 @@ function ManagementLeadership() {
           </nav>
           <div className="course-box-grid">
             <Link to="#" className="course-card">
+              <i className="fas fa-crown"></i>
               <h3>Leadership et posture managériale</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-chess-board"></i>
               <h3>Planification stratégique et opérationnelle</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-exchange-alt"></i>
               <h3>Conduite du changement</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-comments"></i>
               <h3>Gestion de conflits et communication managériale</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-project-diagram"></i>
               <h3>Management de projet</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-tasks"></i>
               <h3>Management agile de projet (SCRUM)</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-clock"></i>
               <h3>Gestion du temps et des priorités</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-balance-scale"></i>
               <h3>Prise de décision managériale</h3>
             </Link>
           </div>

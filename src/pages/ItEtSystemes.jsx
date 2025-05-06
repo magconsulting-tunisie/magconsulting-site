@@ -21,21 +21,27 @@ function ItEtSystemes() {
           </nav>
           <div className="course-box-grid">
             <Link to="#" className="course-card">
+              <i className="fas fa-laptop"></i>
               <h3>Bureautique (Word, Excel, PowerPoint, Outlook)</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-table"></i>
               <h3>Excel avancé, macros et VBA</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-lock"></i>
               <h3>Sécurité informatique et protection des données</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-code"></i>
               <h3>Développement web</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-cogs"></i>
               <h3>Logiciels de gestion (ERP, CRM)</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-digital-tachograph"></i>
               <h3>Transformation digitale et outils collaboratifs</h3>
             </Link>
           </div>

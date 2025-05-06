@@ -23,42 +23,55 @@ function QualiteEtIso() {
           </nav>
           <div className="course-box-grid">
             <Link to="#" className="course-card">
+              <i className="fas fa-check-circle"></i>
               <h3>Management de la qualité</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-search"></i>
               <h3>Audit interne des systèmes de management</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-certificate"></i>
               <h3>ISO 9001: Systèmes de management de la qualité</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-leaf"></i>
               <h3>ISO 14001: Systèmes de management environnemental</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-hard-hat"></i>
               <h3>ISO 45001: Systèmes de management de la santé et la sécurité au travail (S&ST)</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-graduation-cap"></i>
               <h3>ISO 21001: Systèmes de management des organismes d'éducation/formation</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-hand-holding-heart"></i>
               <h3>ISO 26000: Responsabilité sociétale</h3>
             </Link>
             <Link to="#" className="course-card">
-              <h3>ISO 27001: Systèmes de management de la sécurité de l'information - Sécurité de l'information, cybersécurité et protection de la vie privée</h3>
+              <i className="fas fa-shield-alt"></i>
+              <h3>ISO 27001: Systèmes de management de la sécurité de l'information</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-exclamation-triangle"></i>
               <h3>ISO 31000: Management du risque</h3>
             </Link>
             <Link to="#" className="course-card">
-              <h3>ISO 22301: Systèmes de management de la continuité d'activité - Sécurité et résilience</h3>
+              <i className="fas fa-life-ring"></i>
+              <h3>ISO 22301: Systèmes de management de la continuité d'activité</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-gavel"></i>
               <h3>ISO 37001: Systèmes de management anti-corruption</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-utensils"></i>
               <h3>ISO 22000: Management de la sécurité des denrées alimentaires</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-bolt"></i>
               <h3>ISO 50001: Management de l'énergie</h3>
             </Link>
           </div>

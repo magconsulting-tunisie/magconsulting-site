@@ -9,14 +9,15 @@ function Footer() {
           <div className="footer-logo">
             <span>MAG Consulting</span>
           </div>
-          <p>Expertise, conseil et formation de qualité pour répondre à vos défis depuis 2019.</p>
+          <p>Forger les compétences...
+          Impulser les performances !</p>
         </div>
         
         <div className="footer-column">
           <h3>Liens rapides</h3>
           <ul className="footer-links">
             <li><Link to="/">Accueil</Link></li>
-            <li><Link to="/formations">Formations</Link></li>
+            <li><Link to="/formations">Formation</Link></li>
             <li><Link to="/etudes">Études</Link></li>
             <li><Link to="/conseil-accompagnement">Conseil et Accompagnement</Link></li>
             <li><Link to="/contact">Contact</Link></li>

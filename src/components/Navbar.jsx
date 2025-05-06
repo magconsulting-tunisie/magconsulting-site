@@ -40,7 +40,7 @@ function Navbar() {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <span>MAGConsulting</span>
+          <span>MAG Consulting</span>
         </Link>
         
         <div className="navbar-links">
@@ -53,7 +53,7 @@ function Navbar() {
             onMouseLeave={closeDropdown}
           >
             <NavLink to="/formations" className="navbar-link">
-              Formations
+              Formation
             </NavLink>
             {isDropdownOpen && (
               <div className="dropdown-menu">

@@ -8,6 +8,7 @@
   z-index: 1000;
   border-bottom: 1px solid rgba(77, 166, 255, 0.1);
   transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar.scrolled {
@@ -41,12 +42,7 @@
   letter-spacing: 0.5px;
 }
 
-.navbar-logo span::after {
-  content: "®";
-  font-size: 0.8rem;
-  vertical-align: super;
-  color: var(--secondary-color);
-}
+
 
 .navbar-links {
   display: flex;

@@ -24,39 +24,51 @@ function Etudes() {
           </p>
           <div className="study-box-grid">
             <Link to="#" className="study-card">
+              <i className="fas fa-users"></i>
               <h3>Ressources humaines et organisation du travail</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-chess-king"></i>
               <h3>Stratégie et gouvernance d’entreprise</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-chart-line"></i>
               <h3>Finance et gestion des risques</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-bullhorn"></i>
               <h3>Marketing et comportement des consommateurs</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-digital-tachograph"></i>
               <h3>Systèmes d’information et transformation digitale</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-truck"></i>
               <h3>Production, logistique et supply chain</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-shield-alt"></i>
               <h3>Qualité, sécurité et environnement (QSE)</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-lightbulb"></i>
               <h3>Innovation et développement durable</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-handshake"></i>
               <h3>Relations sociales et climat interne</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-gavel"></i>
               <h3>Conformité réglementaire et affaires juridiques</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-tachometer-alt"></i>
               <h3>Performance économique et compétitivité</h3>
             </Link>
             <Link to="#" className="study-card">
+              <i className="fas fa-leaf"></i>
               <h3>Responsabilité sociétale des entreprises (RSE)</h3>
             </Link>
           </div>

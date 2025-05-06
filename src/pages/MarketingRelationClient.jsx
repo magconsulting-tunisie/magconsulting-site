@@ -21,18 +21,23 @@ function MarketingRelationClient() {
           </nav>
           <div className="course-box-grid">
             <Link to="#" className="course-card">
+              <i className="fas fa-handshake"></i>
               <h3>Techniques de vente et négociation</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-heart"></i>
               <h3>Fidélisation et satisfaction client</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-globe"></i>
               <h3>Marketing digital (SEO, réseaux sociaux, emailing)</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-bullhorn"></i>
               <h3>Stratégie marketing</h3>
             </Link>
             <Link to="#" className="course-card">
+              <i className="fas fa-users"></i>
               <h3>Gestion de la relation client</h3>
             </Link>
           </div>
