@@ -14,8 +14,8 @@ function Banner() {
           </div>
           <div className="text-section">
             <h1>
-              <span>Forger les compétences...</span>
-              <span>Impulser les performances !</span>
+              <span>Forger les compétences... </span>
+              <span className="second-line">Impulser les performances !</span>
             </h1>
           </div>
         </div>

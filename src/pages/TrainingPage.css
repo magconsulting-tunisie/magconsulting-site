@@ -55,26 +55,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
   overflow: hidden;
   min-height: 120px;
   animation: fadeIn 0.5s ease-in-out forwards;
   opacity: 0;
-  padding: 1rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 /* Icon Styling */
 .course-card i {
   font-size: 1.5rem;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
   transition: color 0.3s ease;
 }
 
 .course-card:hover i {
   color: var(--secondary-color);
+}
+
+/* Text Styling */
+.course-card h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-dark);
+  line-height: 1.4;
+  font-weight: 500;
+  max-width: 90%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* Varying Heights for Masonry Effect */
@@ -136,13 +150,6 @@
   transform: translateX(5px) translateY(5px);
 }
 
-.course-card h3 {
-  font-size: 1rem;
-  margin: 0;
-  color: var(--text-dark);
-  line-height: 1.4;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .training-section {
@@ -156,6 +163,7 @@
   
   .course-card {
       min-height: 100px;
+      padding: 1rem;
   }
   
   .course-card:nth-child(3n),
@@ -175,9 +183,12 @@
   
   .course-card h3 {
       font-size: 0.9rem;
+      max-width: 95%;
   }
   
   .course-card i {
       font-size: 1.2rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
   }
 }
