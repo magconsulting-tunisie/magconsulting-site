@@ -5,6 +5,7 @@ import './Navbar.css';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -13,6 +14,14 @@ function Navbar() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
   };
 
   useEffect(() => {
@@ -38,11 +47,45 @@ function Navbar() {
           <NavLink to="/" className="navbar-link" end>
             Accueil
           </NavLink>
-          <NavLink to="/services" className="navbar-link">
-            Services
+          <div
+            className="navbar-link dropdown"
+            onMouseEnter={toggleDropdown}
+            onMouseLeave={closeDropdown}
+          >
+            <NavLink to="/formations" className="navbar-link">
+              Formations
+            </NavLink>
+            {isDropdownOpen && (
+              <div className="dropdown-menu">
+                <NavLink to="/formations/qualite-et-iso" className="dropdown-item" onClick={closeDropdown}>
+                  Management de la qualité et Normes ISO
+                </NavLink>
+                <NavLink to="/formations/management-leadership" className="dropdown-item" onClick={closeDropdown}>
+                  Management et Leadership
+                </NavLink>
+                <NavLink to="/formations/rh-et-competences" className="dropdown-item" onClick={closeDropdown}>
+                  Ressources Humaines et Développement des Compétences
+                </NavLink>
+                <NavLink to="/formations/finance-comptabilite-gestion" className="dropdown-item" onClick={closeDropdown}>
+                  Finance, Comptabilité et Gestion
+                </NavLink>
+                <NavLink to="/formations/it-et-systemes" className="dropdown-item" onClick={closeDropdown}>
+                  Informatique et Systèmes d’Information (IT)
+                </NavLink>
+                <NavLink to="/formations/communication-developpement" className="dropdown-item" onClick={closeDropdown}>
+                  Communication et Développement Personnel
+                </NavLink>
+                <NavLink to="/formations/marketing-relation-client" className="dropdown-item" onClick={closeDropdown}>
+                  Commercial, Marketing et Relation Client
+                </NavLink>
+              </div>
+            )}
+          </div>
+          <NavLink to="/etudes" className="navbar-link">
+            Études
           </NavLink>
-          <NavLink to="/achievements" className="navbar-link">
-           Réalisations clés 
+          <NavLink to="/conseil-accompagnement" className="navbar-link">
+            Conseil et Accompagnement
           </NavLink>
           <NavLink to="/contact" className="navbar-link">
             Contact
@@ -78,18 +121,25 @@ function Navbar() {
             Accueil
           </NavLink>
           <NavLink 
-            to="/services" 
+            to="/formations" 
             className="mobile-link" 
             onClick={closeMobileMenu}
           >
-            Services
+            Formations
           </NavLink>
           <NavLink 
-            to="/achievements" 
+            to="/etudes" 
             className="mobile-link" 
             onClick={closeMobileMenu}
           >
-            Réalisations clés 
+            Études
+          </NavLink>
+          <NavLink 
+            to="/conseil-accompagnement" 
+            className="mobile-link" 
+            onClick={closeMobileMenu}
+          >
+            Conseil et Accompagnement
           </NavLink>
           <NavLink 
             to="/contact" 

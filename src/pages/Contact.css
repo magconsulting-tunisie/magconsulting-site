@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --secondary-color: #ff6f61;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --background-dark: #f8f9fa;
+  --background-darker: #e9ecef;
+  --card-dark: #ffffff;
+  --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
 .contact-page {
   background: var(--background-dark);
   color: var(--text-dark);
@@ -15,7 +30,7 @@
 }
 
 .contact-page .contact-hero {
-  background: linear-gradient(to right, rgba(26, 42, 58, 0.9), rgba(77, 166, 255, 0.8)), 
+  background: linear-gradient(to right, rgba(26, 42, 58, 0.95), rgba(77, 166, 255, 0.85)), 
               url('../assets/contact-hero.jpg') center/cover no-repeat;
   padding: 120px 50px;
   text-align: center;
@@ -43,11 +58,13 @@
 .contact-page .contact-form-section {
   padding: 80px 50px;
   background: var(--background-darker);
+  margin-bottom: 20px;
 }
 
 .contact-page .contact-info-section {
   padding: 80px 50px;
   background: var(--background-dark);
+  margin-bottom: 20px;
 }
 
 .contact-page .section-content {
@@ -137,6 +154,7 @@
   background: var(--background-darker);
   color: var(--text-light);
   transition: border-color 0.2s ease;
+  min-height: 40px;
 }
 
 .contact-page .form-group input:focus,
@@ -148,7 +166,7 @@
 
 .contact-page .form-group textarea {
   resize: vertical;
-  max-height: 150px;
+  max-height: 200px;
 }
 
 .contact-page .submit-button {
@@ -163,6 +181,7 @@
   display: block;
   margin: 1.5rem auto 0;
   transition: all var(--transition-speed) ease;
+  min-height: 44px;
 }
 
 .contact-page .submit-button:hover {
@@ -226,7 +245,60 @@
 
 @media (max-width: 768px) {
   .contact-page .contact-hero {
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-page .contact-hero-content {
+    max-width: 90%;
+  }
+
+  .contact-page .contact-hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  .contact-page .contact-hero-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .contact-page .contact-form-section,
+  .contact-page .contact-info-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-page .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-page .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-page .form-group textarea {
+    max-height: 180px;
+  }
+
+  .contact-page .submit-button {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .contact-page .contact-info-grid {
+    gap: 1rem;
+    margin-top: 30px;
+  }
+
+  .contact-page .contact-info-item {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page .contact-hero {
+    padding: 2rem 1.5rem;
   }
 
   .contact-page .contact-hero-content h1 {
@@ -237,38 +309,47 @@
     font-size: 0.95rem;
   }
 
-  .contact-page .contact-form-section,
-  .contact-page .contact-info-section {
-    padding: 2rem 1rem;
+  .contact-page .section-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-page .section-title::after {
+    width: 50px;
+  }
+
+  .contact-page .contact-form-section:hover .section-title::after,
+  .contact-page .contact-info-section:hover .section-title::after {
+    width: 80px;
+  }
+
+  .contact-page .section-text {
+    font-size: 1rem;
   }
 
   .contact-page .contact-form {
     padding: 1.25rem;
   }
 
-  .contact-page .form-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-page .contact-hero {
-    padding: 1.5rem 1rem;
+  .contact-page .form-group input,
+  .contact-page .form-group textarea {
+    font-size: 0.9rem;
   }
 
-  .contact-page .contact-hero-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .contact-page .section-title {
-    font-size: 1.25rem;
-  }
-
-  .contact-page .contact-form {
-    padding: 1rem;
+  .contact-page .form-group textarea {
+    max-height: 150px;
   }
 
   .contact-page .contact-info-item {
-    padding: 0.75rem;
+    padding: 1rem;
+  }
+
+  .contact-page .info-icon {
+    font-size: 1.5rem;
+  }
+
+  .contact-page .contact-info-item p,
+  .contact-page .contact-info-item a {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }

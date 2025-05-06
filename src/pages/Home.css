@@ -10,7 +10,7 @@
   --text-light: #666666;
   --text-lighter: #888888;
   --background-dark: #f8f9fa; /* Soft white/cream background */
-  --background-darker: #e9ecef;
+  --background-darker: #cbdef1;
   --background-beige: #fdf5e6; /* Light beige for accents */
   --card-dark: #ffffff;
   --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -43,6 +43,11 @@ section {
   overflow: hidden;
   position: relative;
   background: var(--background-darker);
+}
+
+.expertise-section {
+  padding: 70px 50px;
+  background: var(--background-dark);
 }
 
 .section-title {
@@ -87,8 +92,6 @@ section:hover .section-title::after {
   max-width: 900px;
   margin: 0 auto;
 }
-
-
 
 /* Hero Section */
 .hero-section {
@@ -144,29 +147,16 @@ section:hover .section-title::after {
 }
 
 /* View More Button */
-.view-more-container {
-  text-align: center;
-  margin-top: 2rem;
-}
+
 
 .view-more-button {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
   background-color: transparent;
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 30px;
   text-decoration: none;
-  font-weight: 500;
   transition: all var(--transition-speed) ease;
 }
 
-.view-more-button:hover {
-  background-color: var(--primary-color);
-  color: var(--background-dark);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(77, 166, 255, 0.3);
-}
 
 /* Presentation Section */
 .presentation-section {
@@ -201,9 +191,6 @@ section:hover .section-title::after {
   box-shadow: var(--shadow-dark);
 }
 
-
-
-
 /* Intervention Section */
 .intervention-section {
   display: flex;
@@ -222,7 +209,6 @@ section:hover .section-title::after {
   left: 0;
   width: 100%;
   height: 5px;
-  
 }
 
 .intervention-section {
@@ -328,7 +314,6 @@ section:hover .section-title::after {
   left: 0;
   width: 100%;
   height: 5px;
- 
 }
 
 .clients-section .section-content {
@@ -347,7 +332,7 @@ section:hover .section-title::after {
 }
 
 .client-category {
-  background: rgba(36, 58, 78, 0.7);
+  background: rgba(248, 252, 255, 0.7);
   backdrop-filter: blur(10px);
   border-radius: var(--border-radius);
   padding: 30px;
@@ -428,7 +413,6 @@ section:hover .section-title::after {
   margin-right: 15px;
 }
 
-
 blockquote {
   font-style: italic;
   font-size: 1.1rem;
@@ -449,7 +433,7 @@ cite {
 
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(135deg, var(--background-darker), var(--primary-dark));
+  background: linear-gradient(350deg, var(--background-dark), var(--primary-dark));
   color: white;
   padding: 70px 50px;
   margin-top: 0px;
@@ -544,7 +528,8 @@ cite {
 /* Responsive Design */
 @media (max-width: 1100px) {
   .presentation-section,
-  .intervention-section {
+  .intervention-section,
+  .expertise-section {
     flex-direction: column;
   }
   
@@ -557,12 +542,14 @@ cite {
 }
 
 @media (max-width: 768px) {
-  section {
+  section,
+  .expertise-section {
     padding: 50px 20px;
   }
   
   .presentation-section,
-  .intervention-section {
+  .intervention-section,
+  .expertise-section {
     padding: 50px 20px;
     flex-direction: column;
     align-items: flex-start;
@@ -612,12 +599,14 @@ cite {
 }
 
 @media (max-width: 576px) {
-  section {
+  section,
+  .expertise-section {
     padding: 40px 15px;
   }
   
   .presentation-section,
-  .intervention-section {
+  .intervention-section,
+  .expertise-section {
     padding: 40px 15px;
     gap: 20px;
   }
@@ -671,4 +660,52 @@ cite {
 
 .fadeIn {
   animation: fadeIn 0.6s ease forwards;
+}
+/* Full-width content for the paragraph at the top */
+.full-width-content {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Two-column layout for the presentation section */
+.presentation-columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 2rem;
+}
+
+/* Container for the expertise cards */
+.expertise-cards-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Ensure images take up correct width in the gallery */
+.image-gallery {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .presentation-columns {
+    flex-direction: column;
+  }
+  
+  .expertise-cards-container,
+  .image-gallery {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .presentation-columns {
+    gap: 20px;
+  }
 }

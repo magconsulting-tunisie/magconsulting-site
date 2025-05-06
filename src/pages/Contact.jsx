@@ -185,7 +185,7 @@ function Contact() {
             </div>
             <div className="contact-info-item">
               <FaMapMarkerAlt className="info-icon" />
-              <p>Adresse: [Votre Adresse, Ville, Pays]</p>
+              <p>Adresse: SFAX, Rue Mahdia</p>
             </div>
           </div>
         </div>

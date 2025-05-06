@@ -1,4 +1,3 @@
-// src/components/Banner.jsx
 import React from 'react';
 import logo from '../assets/logondf.png';
 import bannerBg from '../assets/bannervide.png';
@@ -9,12 +8,16 @@ function Banner() {
     <div className="banner-container">
       <img src={bannerBg} alt="Banner background" className="banner-background" />
       <div className="banner-content">
-        <div className="logo-section">
-          <img src={logo} alt="MAG Consulting Logo" className="logo" />
-        </div>
-        <div className="text-section">
-          <h1>Etudes, Formations</h1>
-          <h2>Conseils et</h2> <h2>Accompagnement</h2>
+        <div className="left-half">
+          <div className="logo-section">
+            <img src={logo} alt="MAG Consulting Logo" className="logo" />
+          </div>
+          <div className="text-section">
+            <h1>
+              <span>Forger les compétences...</span>
+              <span>Impulser les performances !</span>
+            </h1>
+          </div>
         </div>
       </div>
       <div className="contact-info">
@@ -31,7 +34,6 @@ function Banner() {
         </div>
         <div className="contact-item">
           <div className="contact-icon">
-            {/* Improved mail icon with better design */}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#e41e26" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="M22 7l-10 7L2 7" />

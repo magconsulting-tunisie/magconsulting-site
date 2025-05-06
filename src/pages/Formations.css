@@ -1,0 +1,86 @@
+.formations-wrapper {
+    background: var(--background-dark);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+  }
+  
+  .formations-section {
+    padding: 70px 50px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    position: relative;
+    background: var(--background-darker);
+  }
+  
+  .formations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 2rem;
+  }
+  
+  .expertise-card {
+    background-color: var(--card-dark);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-speed) ease;
+    text-align: center;
+    border: 1px solid rgba(77, 166, 255, 0.1);
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .expertise-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-dark);
+    border-color: var(--primary-color);
+  }
+  
+  .expertise-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .expertise-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+  }
+  
+  .expertise-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1100px) {
+    .formations-section {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .formations-section {
+      padding: 50px 20px;
+    }
+    
+    .formations-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .formations-section {
+      padding: 40px 15px;
+    }
+    
+    .expertise-icon {
+      font-size: 2rem;
+    }
+  }

@@ -1,246 +1,230 @@
 /* Banner Container */
-/* Enhanced CSS file */
-
 .banner-container {
-    width: 100%;
-    height: 500px; /* Maintained at exactly 500px as requested */
-    position: relative;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-  }
-  
-  .banner-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-  
-  .banner-content {
-    display: flex;
-    height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 10;
-    padding: 0;
-  }
-  
-  .logo-section {
-    width: 30%; /* Increased width for bigger logo */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px 0 0 20px; /* Adjusted padding to move it more to the top left */
-  }
-  
-  .logo {
-    max-width: 280px; /* Increased from 220px to make logo bigger */
-    animation: floatLogo 3s ease-in-out infinite;
-  }
-  
-  @keyframes floatLogo {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
-  }
-  
-  .text-section {
-    width: 50%; /* Increased width for better spacing */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-    margin-left: -300px; /* Moved much further left as requested */
-    transform: translateX(-40px); /* Additional left movement */
-  }
-  
-  .text-section h1 {
-    color: #14328c;
-    font-size: 3.2rem; /* Increased from 2.8rem */
-    margin: 0;
-    font-weight: bold;
-    margin-bottom: 0;
-    font-family: Arial, sans-serif;
-    animation: slideInFromLeft 1s ease-out, textPulse 3s infinite;
-    margin-left: -30px; /* Additional left movement for h1 specifically */
-  }
-  
-  .text-section h2 {
-    color: #e41e26;
-    font-size: 2.9rem; /* Increased from 2.5rem */
-    line-height: 1.1;
-    margin: 0;
-    font-weight: bold;
-    margin-top: 5px;
-    font-family: Arial, sans-serif;
-    animation: slideInFromLeft 1.2s ease-out, textPulse 3s infinite 0.5s;
-    
-  }
-  
-  @keyframes slideInFromLeft {
-    0% { transform: translateX(-100px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-  }
-  
-  @keyframes textPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
-    100% { transform: scale(1); }
-  }
-  
-  .contact-info {
-    position: absolute;
-    bottom: 40px;
-    left: 50px;
-    display: flex;
-    align-items: center;
-    z-index: 15;
-    gap: 25px;
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-    margin-right: 25px;
-    color: #333;
-  }
-  
-  .contact-icon {
-    width: 38px; /* Slightly increased size */
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
-    border-radius: 50%;
-    padding: 8px;
-    border: 1px solid #e41e26;
-    margin-right: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Added subtle shadow */
-  }
-  
-  .contact-icon svg {
-    width: 20px; /* Slightly increased icon size */
-    height: 20px;
-  }
-  
-  .contact-text {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-label {
-    font-weight: bold;
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .contact-value {
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  /* Media Queries for Responsiveness */
-
-
-/* Media Queries for Responsiveness - Updated for left alignment */
-
-/* Large tablets and small desktop screens */
-@media screen and (max-width: 1200px) {
-  .banner-content {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-  
-  .text-section h1 {
-    font-size: 2.8rem;
-  }
-  
-  .text-section h2 {
-    font-size: 2.5rem;
-  }
-  
-  .logo {
-    max-width: 240px;
-  }
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-/* Medium tablets */
-@media screen and (max-width: 992px) {
-  .banner-content {
-    flex-direction: column;
-    align-items: flex-start; /* Changed from center to flex-start */
-    text-align: left; /* Changed from center to left */
-    padding: 0 20px; /* Added padding to prevent sticking to edge */
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.banner-content {
+  display: flex;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  padding: 0;
+}
+
+.left-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px; /* Move content up a little */
+  height: 100%;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex: 1; /* Take top half */
+  padding-top: 20px; /* Additional nudge upward */
+}
+
+.logo {
+  max-width: 400px; /* Increased from 320px */
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.text-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  flex: 1; /* Take bottom half */
+  padding-bottom: 150px; /* Space for contact info */
+}
+
+.text-section h1 {
+  color: #14328c;
+  font-size: 2.8rem;
+  margin: 0;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  animation: slideInFromLeft 1s ease-out, textPulse 3s infinite;
+  max-width: 90%; /* Prevent text from exceeding left half */
+  line-height: 1.2;
+}
+
+.text-section h1 span {
+  display: block; /* Split into two lines */
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes textPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.contact-info {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 15;
+  gap: 25px;
+  max-width: 50%; /* Keep contact info in left half */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  color: #333;
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  padding: 8px;
+  border: 1px solid #e41e26;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-value {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+  .left-half {
+    padding-top: 15px;
   }
   
   .logo-section {
-    width: 100%;
-    align-items: flex-start; /* Changed from center to flex-start */
-    padding: 20px 0 0 0; /* Removed right padding */
-  }
-  
-  .text-section {
-    width: 100%;
-    margin-left: 0;
-    transform: none;
-    align-items: flex-start; /* Changed from center to flex-start */
-    padding-left: 0; /* Ensure no extra padding */
-  }
-  
-  .text-section h1, 
-  .text-section h2 {
-    margin-left: 0;
-    text-align: left; /* Changed from center to left */
+    padding-top: 15px;
   }
   
   .text-section h1 {
     font-size: 2.4rem;
   }
   
-  .text-section h2 {
-    font-size: 2.1rem;
-  }
-  
-  .contact-info {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    justify-content: flex-start; /* Changed from center to flex-start */
-    margin-top: 20px;
-    width: 100%;
-    padding-left: 0; /* Ensure no extra padding */
+  .logo {
+    max-width: 300px;
   }
 }
 
-/* Small tablets and large phones */
-@media screen and (max-width: 768px) {
-  .banner-container {
-    height: auto;
-    min-height: 480px;
-  }
-  
-  .logo {
-    max-width: 200px;
+@media screen and (max-width: 992px) {
+  .left-half {
+    width: 100%;
+    align-items: center;
+    padding-top: 20px;
   }
   
   .text-section h1 {
     font-size: 2rem;
   }
   
-  .text-section h2 {
-    font-size: 1.8rem;
+  .logo {
+    max-width: 260px;
+  }
+  
+  .contact-info {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Mobile responsiveness modifications */
+@media screen and (max-width: 768px) {
+  .banner-container {
+    height: auto;
+    min-height: 420px;
+  }
+  
+  .left-half {
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+  
+  .logo-section {
+    justify-content: flex-start;
+  }
+  
+  .text-section {
+    justify-content: flex-start;
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  .text-section h1 {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  
+  .logo {
+    max-width: 300px;
   }
   
   .contact-info {
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start; /* Added to align contact items to left */
+    align-items: flex-start;
+    padding-left: 20px;
   }
   
   .contact-item {
@@ -248,26 +232,21 @@
   }
 }
 
-/* Mobile phones */
 @media screen and (max-width: 480px) {
   .banner-container {
-    min-height: 420px;
+    min-height: 380px;
   }
   
-  .logo {
-    max-width: 160px;
+  .left-half {
+    padding-left: 15px;
   }
   
   .text-section h1 {
-    font-size: 1.6rem;
-  }
-  
-  .text-section h2 {
     font-size: 1.4rem;
   }
   
-  .contact-info {
-    padding: 0; /* Changed from 0 20px to 0 */
+  .logo {
+    max-width: 180px;
   }
   
   .contact-label {
@@ -284,22 +263,16 @@
   }
 }
 
-/* Extra small devices */
 @media screen and (max-width: 360px) {
   .text-section h1 {
-    font-size: 1.4rem;
-  }
-  
-  .text-section h2 {
     font-size: 1.2rem;
   }
   
-  /* Added more aggressive left alignment for very small screens */
-  .banner-content {
-    padding-left: 15px;
+  .left-half {
+    padding: 10px 15px;
   }
   
   .logo-section {
-    padding-left: 0;
+    padding-top: 10px;
   }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaLeaf, FaProjectDiagram, FaUsers, FaBalanceScale, FaCog, FaGraduationCap } from 'react-icons/fa';
+import { FaBullseye, FaEye, FaHeart, FaCertificate, FaHandshake, FaLaptopCode, FaChartLine, FaUsersCog, FaUserTie, FaFolderOpen, FaChessBoard, FaBuilding } from 'react-icons/fa';
 import Banner from '../components/Banner';
 import bureau1 from '../assets/bureau1.png';
 import bureau2 from '../assets/bureau2.png';
@@ -23,94 +23,77 @@ function Home() {
       
       {/* Company Presentation Section */}
       <section className="presentation-section">
-        <div className="section-content">
+        {/* Full-width paragraph at the top */}
+        <div className="full-width-content">
           <h2 className="section-title">Présentation de MAG Consulting</h2>
           <p className="section-text">
-            Fondée en 2019, MAG Consulting est une société spécialisée dans l'étude, le conseil, l'expertise et la formation. 
-            Elle s'appuie sur des compétences internes et un réseau d'intervenants extérieurs hautement qualifiés pour répondre 
-            aux défis de ses clients.
+            Depuis sa création en 2019, MAG Consulting s'impose comme un acteur clé du développement des compétences. 
+            Forte de son expertise pointue en étude, conseil, expertise et formation, notre société accompagne ses clients dans 
+            leur quête de performance et d'innovation continue. Grâce à une équipe interne hautement qualifiée et un réseau
+            d'experts externes de premier plan, nous offrons des solutions agiles et sur-mesure, permettant un développement 
+            rapide, durable et adapté aux enjeux spécifiques de chaque organisation.
           </p>
-          
-          <div className="expertise-grid">
+        </div>
+        
+        {/* Two-column layout for images and cards */}
+        <div className="presentation-columns">
+          {/* Left column with cards */}
+          <div className="expertise-cards-container">
             <div className="expertise-card">
               <div className="expertise-icon">
-                <FaBalanceScale />
+                <FaBullseye />
               </div>
-              <h3>Finances publiques</h3>
-              <p>Optimisation et gestion des ressources publiques</p>
+              <h3>Notre Mission</h3>
+              <p>Renforcer durablement les compétences des individus et des organisations en proposant des solutions de formation, de conseil et d'accompagnement sur mesure, adaptées aux enjeux économiques, humains et technologiques d'aujourd'hui et de demain.</p>
             </div>
             
             <div className="expertise-card">
               <div className="expertise-icon">
-                <FaCog />
+                <FaEye />
               </div>
-              <h3>Contrôle et audit</h3>
-              <p>Surveillance et amélioration des processus organisationnels</p>
+              <h3>Notre Vision</h3>
+              <p>Devenir un acteur de référence mondiale dans le développement des organisations et des individus, inspirant une culture d'apprentissage continu et contribuant à l'émergence et l'essor d'entreprises performantes, responsables et résilientes dans les pays africains, arabes et francophones.</p>
             </div>
             
             <div className="expertise-card">
               <div className="expertise-icon">
-                <FaUsers />
+                <FaHeart />
               </div>
-              <h3>Gouvernance</h3>
-              <p>Stratégies de décentralisation et gouvernance efficace</p>
-            </div>
-            
-            <div className="expertise-card">
-              <div className="expertise-icon">
-                <FaProjectDiagram />
-              </div>
-              <h3>Gestion de projets</h3>
-              <p>Planification, exécution et évaluation de projets</p>
-            </div>
-            
-            <div className="expertise-card">
-              <div className="expertise-icon">
-                <FaLeaf />
-              </div>
-              <h3>Changement climatique</h3>
-              <p>Solutions adaptatives et stratégies d'atténuation</p>
-            </div>
-            
-            <div className="expertise-card">
-              <div className="expertise-icon">
-                <FaGraduationCap />
-              </div>
-              <h3>Formation</h3>
-              <p>Renforcement des capacités et développement des compétences</p>
+              <h3>Nos Valeurs</h3>
+              <p>
+                <strong>Excellence :</strong> Offrir des services de haute qualité basés sur l'expertise, l'innovation et l'engagement.<br />
+                <strong>Impact :</strong> Créer de la valeur concrète et mesurable pour nos bénéficiaires, au service du développement personnel et collectif.<br />
+                <strong>Éthique :</strong> Agir avec intégrité, transparence et responsabilité dans toutes nos actions.
+              </p>
             </div>
           </div>
           
-          <div className="view-more-container">
-            <Link to="/services" className="view-more-button">
-              Voir tous nos domaines d'expertise
-            </Link>
+          {/* Right column with images */}
+          <div className="image-gallery">
+            <img 
+              src={bureau1} 
+              alt="Office view 1" 
+              className="gallery-image"
+            />
+            <img 
+              src={bureau2} 
+              alt="Office view 2" 
+              className="gallery-image"
+            />
+            <img 
+              src={bureau3} 
+              alt="Office view 3" 
+              className="gallery-image"
+            />
           </div>
         </div>
         
-        <div className="image-gallery">
-          <img 
-            src={bureau1} 
-            alt="Office view 1" 
-            className="gallery-image"
-          />
-          <img 
-            src={bureau2} 
-            alt="Office view 2" 
-            className="gallery-image"
-          />
-          <img 
-            src={bureau3} 
-            alt="Office view 3" 
-            className="gallery-image"
-          />
-        </div>
       </section>
       
       {/* Intervention Areas Section */}
       <section className="intervention-section">
         <div className="section-content">
-          <h2 className="section-title">Domaines d'intervention</h2>
+          <h2 className="section-title">Nos services</h2>
           <p className="section-text">
             MAG Consulting est en mesure d'aborder des problématiques complexes dans les secteurs réglementaires, 
             la maîtrise d'ouvrage, et la gestion privée et publique.
@@ -118,26 +101,27 @@ function Home() {
           
           <div className="intervention-cards">
             <div className="intervention-card">
-              <h3>Management public</h3>
-              <p>Amélioration des processus administratifs et optimisation des ressources publiques</p>
+            <Link to="/formations" className="view-more-button">
+              <h3>Formation</h3>
+              <p>Renforcement des capacités et développement des compétences à travers des programmes sur mesure.</p>
+              </Link>
             </div>
             
             <div className="intervention-card">
-              <h3>Collectivités locales</h3>
-              <p>Assistance technique, recensement, élaboration de plans et formation du personnel</p>
+            <Link to="/etudes" className="view-more-button">
+              <h3>Études</h3>
+              <p>Analyses approfondies et diagnostics pour orienter vos projets et stratégies.</p>
+              </Link>
             </div>
             
             <div className="intervention-card">
-              <h3>ONG et associations</h3>
-              <p>Formations spécialisées et accompagnement stratégique pour atteindre vos objectifs</p>
+            <Link to="/conseil-accompagnement" className="view-more-button">
+              <h3>Conseils et accompagnement</h3>
+              <p>Assistance stratégique et opérationnelle pour optimiser vos performances et atteindre vos objectifs.</p>
+              </Link>
             </div>
           </div>
           
-          <div className="view-more-container">
-            <Link to="/achievements" className="view-more-button">
-              Explorer nos interventions
-            </Link>
-          </div>
         </div>
         
         <div className="image-gallery">
@@ -154,11 +138,91 @@ function Home() {
         </div>
       </section>
       
+      {/* Expertise Domains Section */}
+      <section className="expertise-section">
+        <div className="section-content">
+          <h2 className="section-title">Nos domaines d’expertise</h2>
+          <div className="expertise-grid">
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaCertificate />
+              </div>
+              <h3>Management de la qualité ISO</h3>
+              <p>Mise en place et optimisation des systèmes de management conformes aux normes ISO.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaHandshake />
+              </div>
+              <h3>Marketing et Relation Client</h3>
+              <p>Stratégies pour renforcer la fidélité client et optimiser l’expérience utilisateur.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaLaptopCode />
+              </div>
+              <h3>IT et Transformation Digitale</h3>
+              <p>Accompagnement dans l’adoption de solutions numériques pour une performance accrue.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaChartLine />
+              </div>
+              <h3>Finance et Audit</h3>
+              <p>Gestion financière, audits internes et optimisation des ressources.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaUsersCog />
+              </div>
+              <h3>Ressources Humaines et Développement des Compétences</h3>
+              <p>Programmes pour attirer, former et retenir les talents.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaUserTie />
+              </div>
+              <h3>Management et Leadership</h3>
+              <p>Formations pour développer des compétences en gestion et leadership.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaFolderOpen />
+              </div>
+              <h3>Accompagnement et régularisation de dossiers administratifs</h3>
+              <p>Assistance dans la gestion et la conformité des démarches administratives.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaChessBoard />
+              </div>
+              <h3>Stratégie et Gouvernance</h3>
+              <p>Élaboration de stratégies et renforcement des structures de gouvernance.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaBuilding />
+              </div>
+              <h3>Développement Institutionnel et Personnel</h3>
+              <p>Solutions pour un développement durable des institutions et des individus.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Clients and Partners Section */}
       <section className="clients-section">
         <div className="section-content">
           <div className="clients-content">
-            <h2 className="section-title">Ils nous font confiance</h2>
+            <h2 className="section-title">Nos clients</h2>
             <p className="section-text">
               MAG Consulting est fière de collaborer avec un large éventail d'organisations prestigieuses:
             </p>
@@ -167,30 +231,49 @@ function Home() {
               <div className="client-category">
                 <h3>Secteur public</h3>
                 <ul className="client-list">
-                  <li>Ministères et organismes gouvernementaux</li>
-                  <li>Collectivités locales</li>
+                  <li>Ministères</li>
+                  <li>Collectivités territoriales</li>
+                  <li>Établissements publics administratifs</li>
                   <li>Entreprises publiques</li>
+                  <li>Agences nationales</li>
+                  <li>Autorités indépendantes</li>
+                  <li>Institutions constitutionnelles</li>
+                  <li>Services déconcentrés de l’État</li>
+                  <li>Universités et établissements d’enseignement</li>
                 </ul>
               </div>
               
               <div className="client-category">
-                <h3>Partenaires techniques et financiers</h3>
+                <h3>Secteur privé</h3>
                 <ul className="client-list">
-                  <li>Union Européenne</li>
-                  <li>Expertise France</li>
-                  <li>GIZ</li>
-                  <li>CILG VNG</li>
-                  <li>Heinrich-Böll-Stiftung</li>
-                  <li>Conservatoire du littoral</li>
+                  <li>Très Petites Entreprises (TPE)</li>
+                  <li>Petites et Moyennes Entreprises (PME)</li>
+                  <li>Grandes entreprises</li>
+                  <li>Groupes multinationaux</li>
+                  <li>Startups</li>
+                  <li>Cabinets de conseil et prestataires de services</li>
                 </ul>
               </div>
               
               <div className="client-category">
-                <h3>ONG et OSC</h3>
+                <h3>Organisations de Coopération internationale</h3>
                 <ul className="client-list">
-                  <li>ADFR</li>
-                  <li>TYI</li>
-                  <li>Et autres organisations de la société civile</li>
+                  <li>Agences de coopération internationale</li>
+                  <li>Organisations intergouvernementales</li>
+                  <li>Partenaires techniques et financiers</li>
+                  <li>Réseaux régionaux de coopération</li>
+                  <li>Agences de développement bilatérales</li>
+                </ul>
+              </div>
+              
+              <div className="client-category">
+                <h3>Associations</h3>
+                <ul className="client-list">
+                  <li>Fondations</li>
+                  <li>Associations d’intérêt général</li>
+                  <li>Fédérations et unions d’associations</li>
+                  <li>Organisations non gouvernementales</li>
+                  <li>Organisations de la société civile</li>
                 </ul>
               </div>
             </div>
@@ -206,9 +289,6 @@ function Home() {
           <div className="cta-buttons">
             <Link to="/contact">
               <button className="cta-button primary">Demander un devis</button>
-            </Link>
-            <Link to="/services">
-              <button className="cta-button secondary">Découvrir nos services</button>
             </Link>
           </div>
           <p className="cta-contact-info">
