@@ -181,15 +181,17 @@ function Contact() {
             </div>
             <div className="contact-info-item">
               <FaPhone className="info-icon" />
-              <p>Téléphone: <a href="tel:+216 96 111 262">+216 96 111 262</a></p>
+              <p>Bureau: <a href="tel:+216 96 111 262"> (+216) 74431511</a></p>
+              <p>Mobile: <a href="tel:+216 96 111 262">(+216) 99727827</a></p>
             </div>
             <div className="contact-info-item">
               <FaMapMarkerAlt className="info-icon" />
-              <p>Adresse: SFAX, Rue Mahdia</p>
+              <p>Avenue 5 aôut - Résidence Youssef - 3002 Sfax Tunisie</p>
             </div>
           </div>
         </div>
       </section>
+      
     </div>
   );
 }

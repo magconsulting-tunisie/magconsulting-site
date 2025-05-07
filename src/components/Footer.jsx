@@ -9,8 +9,7 @@ function Footer() {
           <div className="footer-logo">
             <span>MAG Consulting</span>
           </div>
-          <p>Forger les compétences...
-          Impulser les performances !</p>
+          <p>Forger les compétences...<br />Impulser les performances !</p>
         </div>
         
         <div className="footer-column">
@@ -20,6 +19,8 @@ function Footer() {
             <li><Link to="/formations">Formation</Link></li>
             <li><Link to="/etudes">Études</Link></li>
             <li><Link to="/conseil-accompagnement">Conseil et Accompagnement</Link></li>
+            <li><Link to="/projets">Nos projets et réalisations</Link></li>
+            <li><Link to="/partenaires">Nos partenaires</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -27,8 +28,10 @@ function Footer() {
         <div className="footer-column">
           <h3>Contact</h3>
           <p>Email: magconsulting17@gmail.com</p>
-          <p>Téléphone: +216 96 111 262</p>
-          <p>Adresse: SFAX, Rue Mahdia</p>
+          <p>Téléphone:</p>
+          <p>Bureau : (+216) 74431511</p>
+          <p>Mobile : (+216) 99727827</p>
+          <p>Adresse: Avenue 5 aôut - Résidence Youssef - 3002 Sfax Tunisie</p>
         </div>
       </div>
       

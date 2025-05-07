@@ -29,6 +29,7 @@
   align-items: center;
   text-decoration: none;
   transition: transform 0.3s ease;
+  padding-right: 1rem; /* Added some right padding to separate from links */
 }
 
 .navbar-logo:hover {
@@ -42,22 +43,23 @@
   letter-spacing: 0.5px;
 }
 
-
-
 .navbar-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.2rem; /* Reduced gap between links */
+  flex-wrap: nowrap; /* Ensure links stay in one line */
+  align-items: center; /* Ensure all items are vertically centered */
 }
 
 .navbar-link {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.95rem; /* Reduced font size */
   padding: 0.5rem 0;
   position: relative;
   transition: all 0.3s ease;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px; /* Slightly reduced letter spacing */
+  white-space: nowrap; /* Prevent links from wrapping */
 }
 
 .navbar-link:hover {
@@ -92,6 +94,13 @@
 /* Dropdown Menu */
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Fix for the extra lines under Formation */
+.dropdown > .navbar-link::after {
+  display: none; /* Removes the first line */
 }
 
 .dropdown-menu {

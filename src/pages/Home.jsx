@@ -1,29 +1,81 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBullseye, FaEye, FaHeart, FaCertificate, FaHandshake, FaLaptopCode, FaChartLine, FaUsersCog, FaUserTie, FaFolderOpen, FaChessBoard, FaBuilding } from 'react-icons/fa';
+import { FaBullseye, FaEye, FaHeart, FaCertificate, FaHandshake, FaLaptopCode, FaChartLine, FaUsersCog, FaUserTie, FaFolderOpen, FaChessBoard, FaBuilding, FaLandmark, FaBalanceScale, FaCity } from 'react-icons/fa';
 import Banner from '../components/Banner';
 import bureau1 from '../assets/bureau1.png';
 import bureau2 from '../assets/bureau2.png';
 import bureau3 from '../assets/bureau3.png';
 import bannera from '../assets/bannera.jpg';
 import bannerb from '../assets/bannerb.jpeg';
+import logoGiz from '../assets/logo-giz.png';
+import heinrich from '../assets/heinrich.png';
+import cilg from '../assets/CILG.jpg';
+import expertiseFrance from '../assets/expertise france.png';
+import unionEuropeenne from '../assets/union europeenne.png';
+import conservatoireLittoral from '../assets/Conservatoire_du_littoral.png';
+import youthTunisianImpact from '../assets/youth-tunisian-impact.png';
+import adfr from '../assets/adfr.png';
 import './Home.css';
 
 function Home() {
+  const [swiperLoaded, setSwiperLoaded] = useState(false);
+
   useEffect(() => {
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
-    // Set page title
     document.title = "MAG Consulting - Tunisie";
+
+    // Dynamically load Swiper CSS
+    const swiperCss = document.createElement('link');
+    swiperCss.rel = 'stylesheet';
+    swiperCss.href = 'https://unpkg.com/swiper/swiper-bundle.min.css';
+    document.head.appendChild(swiperCss);
+
+    // Dynamically load Swiper JS
+    const swiperScript = document.createElement('script');
+    swiperScript.src = 'https://unpkg.com/swiper/swiper-bundle.min.js';
+    swiperScript.async = true;
+    swiperScript.onload = () => {
+      // Initialize Swiper after the script is loaded
+      if (window.Swiper) {
+        new window.Swiper('.swiper-container', {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          },
+        });
+        setSwiperLoaded(true);
+      }
+    };
+    document.body.appendChild(swiperScript);
+
+    // Cleanup on unmount
+    return () => {
+      document.head.removeChild(swiperCss);
+      document.body.removeChild(swiperScript);
+    };
   }, []);
 
   return (
     <div className="home-wrapper">
       <Banner />
       
-      {/* Company Presentation Section */}
       <section className="presentation-section">
-        {/* Full-width paragraph at the top */}
         <div className="full-width-content">
           <h2 className="section-title">Présentation de MAG Consulting</h2>
           <p className="section-text">
@@ -35,9 +87,7 @@ function Home() {
           </p>
         </div>
         
-        {/* Two-column layout for images and cards */}
         <div className="presentation-columns">
-          {/* Left column with cards */}
           <div className="expertise-cards-container">
             <div className="expertise-card">
               <div className="expertise-icon">
@@ -68,7 +118,6 @@ function Home() {
             </div>
           </div>
           
-          {/* Right column with images */}
           <div className="image-gallery">
             <img 
               src={bureau1} 
@@ -87,10 +136,8 @@ function Home() {
             />
           </div>
         </div>
-        
       </section>
       
-      {/* Intervention Areas Section */}
       <section className="intervention-section">
         <div className="section-content">
           <h2 className="section-title">Nos services</h2>
@@ -101,27 +148,26 @@ function Home() {
           
           <div className="intervention-cards">
             <div className="intervention-card">
-            <Link to="/formations" className="view-more-button">
-              <h3>Formation</h3>
-              <p>Renforcement des capacités et développement des compétences à travers des programmes sur mesure.</p>
+              <Link to="/formations" className="view-more-button">
+                <h3>Formation</h3>
+                <p>Renforcement des capacités et développement des compétences à travers des programmes sur mesure.</p>
               </Link>
             </div>
             
             <div className="intervention-card">
-            <Link to="/etudes" className="view-more-button">
-              <h3>Études</h3>
-              <p>Analyses approfondies et diagnostics pour orienter vos projets et stratégies.</p>
+              <Link to="/etudes" className="view-more-button">
+                <h3>Études</h3>
+                <p>Analyses approfondies et diagnostics pour orienter vos projets et stratégies.</p>
               </Link>
             </div>
             
             <div className="intervention-card">
-            <Link to="/conseil-accompagnement" className="view-more-button">
-              <h3>Conseils et accompagnement</h3>
-              <p>Assistance stratégique et opérationnelle pour optimiser vos performances et atteindre vos objectifs.</p>
+              <Link to="/conseil-accompagnement" className="view-more-button">
+                <h3>Conseils et accompagnement</h3>
+                <p>Assistance stratégique et opérationnelle pour optimiser vos performances et atteindre vos objectifs.</p>
               </Link>
             </div>
           </div>
-          
         </div>
         
         <div className="image-gallery">
@@ -138,7 +184,6 @@ function Home() {
         </div>
       </section>
       
-      {/* Expertise Domains Section */}
       <section className="expertise-section">
         <div className="section-content">
           <h2 className="section-title">Nos domaines d’expertise</h2>
@@ -214,11 +259,33 @@ function Home() {
               <h3>Développement Institutionnel et Personnel</h3>
               <p>Solutions pour un développement durable des institutions et des individus.</p>
             </div>
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaLandmark />
+              </div>
+              <h3>Management Public</h3>
+              <p>Expertise en gestion des organismes publics et optimisation des services administratifs.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaBalanceScale />
+              </div>
+              <h3>Politiques Publiques</h3>
+              <p>Analyse, développement et évaluation des politiques publiques pour maximiser leur impact social.</p>
+            </div>
+            
+            <div className="expertise-card">
+              <div className="expertise-icon">
+                <FaCity />
+              </div>
+              <h3>Gouvernance des Affaires Publiques Locales</h3>
+              <p>Accompagnement des collectivités territoriales pour une gestion efficiente et participative.</p>
+            </div>
           </div>
         </div>
       </section>
       
-      {/* Clients and Partners Section */}
       <section className="clients-section">
         <div className="section-content">
           <div className="clients-content">
@@ -281,7 +348,83 @@ function Home() {
         </div>
       </section>
       
-      {/* Call to Action Section */}
+      <section className="clients-section trusted-section">
+        <div className="section-content">
+          <h2 className="section-title">Ils nous ont fait confiance</h2>
+          <div className={`swiper-container ${!swiperLoaded ? 'swiper-fallback' : ''}`}>
+            <div className="swiper-wrapper">
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={logoGiz} alt="GIZ logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">GIZ</p>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={heinrich} alt="Heinrich logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">Heinrich Böll Stiftung</p>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={cilg} alt="CILG logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">CILG VNG International</p>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={expertiseFrance} alt="Expertise France logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">Expertise France</p>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={unionEuropeenne} alt="Union Européenne logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">Union Européenne</p>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={conservatoireLittoral} alt="Conservatoire du Littoral logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">Conservatoire du Littoral</p>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={youthTunisianImpact} alt="Youth Tunisian Impact logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">Youth Tunisian Impact</p>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="client-logo">
+                  <div className="logo-image-wrapper">
+                    <img src={adfr} alt="ADFR logo" className="logo-image" />
+                  </div>
+                  <p className="logo-title">ADFR</p>
+                </div>
+              </div>
+            </div>
+            {/* Add navigation buttons */}
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      
       <section className="cta-section">
         <div className="cta-content">
           <h2 className="cta-title">Prêt à concrétiser votre projet?</h2>
@@ -292,7 +435,7 @@ function Home() {
             </Link>
           </div>
           <p className="cta-contact-info">
-            Ou appelez-nous directement au <strong>+216 96 111 262</strong>
+            Ou appelez-nous directement au <strong> (+216) 99727827 /  (+216) 74431511</strong>
           </p>
         </div>
       </section>

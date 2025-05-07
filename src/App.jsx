@@ -11,6 +11,8 @@ import CommunicationDeveloppement from './pages/CommunicationDeveloppement';
 import MarketingRelationClient from './pages/MarketingRelationClient';
 import Etudes from './pages/Etudes';
 import ConseilAccompagnement from './pages/ConseilAccompagnement';
+import Projects from './pages/Projects';
+import Partners from './pages/Partners';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -55,6 +57,8 @@ function App() {
         <Route path="/formations/marketing-relation-client" element={<MarketingRelationClient />} />
         <Route path="/etudes" element={<Etudes />} />
         <Route path="/conseil-accompagnement" element={<ConseilAccompagnement />} />
+        <Route path="/projets" element={<Projects />} />
+        <Route path="/partenaires" element={<Partners />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

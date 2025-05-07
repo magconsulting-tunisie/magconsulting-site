@@ -5,7 +5,6 @@ import './Navbar.css';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -14,14 +13,6 @@ function Navbar() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-  };
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
   };
 
   useEffect(() => {
@@ -47,45 +38,45 @@ function Navbar() {
           <NavLink to="/" className="navbar-link" end>
             Accueil
           </NavLink>
-          <div
-            className="navbar-link dropdown"
-            onMouseEnter={toggleDropdown}
-            onMouseLeave={closeDropdown}
-          >
+          <div className="dropdown">
             <NavLink to="/formations" className="navbar-link">
               Formation
             </NavLink>
-            {isDropdownOpen && (
-              <div className="dropdown-menu">
-                <NavLink to="/formations/qualite-et-iso" className="dropdown-item" onClick={closeDropdown}>
-                  Management de la qualité et Normes ISO
-                </NavLink>
-                <NavLink to="/formations/management-leadership" className="dropdown-item" onClick={closeDropdown}>
-                  Management et Leadership
-                </NavLink>
-                <NavLink to="/formations/rh-et-competences" className="dropdown-item" onClick={closeDropdown}>
-                  Ressources Humaines et Développement des Compétences
-                </NavLink>
-                <NavLink to="/formations/finance-comptabilite-gestion" className="dropdown-item" onClick={closeDropdown}>
-                  Finance, Comptabilité et Gestion
-                </NavLink>
-                <NavLink to="/formations/it-et-systemes" className="dropdown-item" onClick={closeDropdown}>
-                  Informatique et Systèmes d’Information (IT)
-                </NavLink>
-                <NavLink to="/formations/communication-developpement" className="dropdown-item" onClick={closeDropdown}>
-                  Communication et Développement Personnel
-                </NavLink>
-                <NavLink to="/formations/marketing-relation-client" className="dropdown-item" onClick={closeDropdown}>
-                  Commercial, Marketing et Relation Client
-                </NavLink>
-              </div>
-            )}
+            <div className="dropdown-menu">
+              <NavLink to="/formations/qualite-et-iso" className="dropdown-item">
+                Management de la qualité et Normes ISO
+              </NavLink>
+              <NavLink to="/formations/management-leadership" className="dropdown-item">
+                Management et Leadership
+              </NavLink>
+              <NavLink to="/formations/rh-et-competences" className="dropdown-item">
+                Ressources Humaines et Développement des Compétences
+              </NavLink>
+              <NavLink to="/formations/finance-comptabilite-gestion" className="dropdown-item">
+                Finance, Comptabilité et Gestion
+              </NavLink>
+              <NavLink to="/formations/it-et-systemes" className="dropdown-item">
+                Informatique et Systèmes d'Information (IT)
+              </NavLink>
+              <NavLink to="/formations/communication-developpement" className="dropdown-item">
+                Communication et Développement Personnel
+              </NavLink>
+              <NavLink to="/formations/marketing-relation-client" className="dropdown-item">
+                Commercial, Marketing et Relation Client
+              </NavLink>
+            </div>
           </div>
           <NavLink to="/etudes" className="navbar-link">
             Études
           </NavLink>
           <NavLink to="/conseil-accompagnement" className="navbar-link">
             Conseil et Accompagnement
+          </NavLink>
+          <NavLink to="/projets" className="navbar-link">
+            Nos projets
+          </NavLink>
+          <NavLink to="/partenaires" className="navbar-link">
+            Nos partenaires
           </NavLink>
           <NavLink to="/contact" className="navbar-link">
             Contact
@@ -140,6 +131,20 @@ function Navbar() {
             onClick={closeMobileMenu}
           >
             Conseil et Accompagnement
+          </NavLink>
+          <NavLink 
+            to="/projets" 
+            className="mobile-link" 
+            onClick={closeMobileMenu}
+          >
+            Nos projets
+          </NavLink>
+          <NavLink 
+            to="/partenaires" 
+            className="mobile-link" 
+            onClick={closeMobileMenu}
+          >
+            Nos partenaires
           </NavLink>
           <NavLink 
             to="/contact" 

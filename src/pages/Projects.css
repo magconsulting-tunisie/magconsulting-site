@@ -1,0 +1,210 @@
+.projects-wrapper {
+    background: var(--background-dark);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+  }
+  
+  .projects-section {
+    padding: 70px 50px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    position: relative;
+    background: var(--background-darker);
+  }
+  
+  .tracker {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: var(--text-light);
+  }
+  
+  .tracker a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .tracker a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .tracker span {
+    color: var(--text-light);
+    margin: 0 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+  }
+  
+  .section-text {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 900px;
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 30px;
+    margin-top: 1rem;
+  }
+  
+  .project-card {
+    background-color: var(--card-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(77, 166, 255, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(45deg, rgba(77, 166, 255, 0.05), rgba(255, 255, 255, 0.05));
+    border-bottom: 1px solid rgba(77, 166, 255, 0.1);
+  }
+  
+  .card-header i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .card-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+  }
+  
+  .project-list {
+    list-style-type: disc;
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    margin: 0;
+  }
+  
+  .project-list li {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  
+  .project-list li::marker {
+    color: var(--secondary-color);
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Staggered animation delays */
+  .project-card:nth-child(1) { animation-delay: 0.1s; }
+  .project-card:nth-child(2) { animation-delay: 0.2s; }
+  .project-card:nth-child(3) { animation-delay: 0.3s; }
+  .project-card:nth-child(4) { animation-delay: 0.4s; }
+  .project-card:nth-child(5) { animation-delay: 0.5s; }
+  .project-card:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* Hover Effects */
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .project-card:hover .card-header i {
+    color: var(--secondary-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-section {
+      padding: 50px 20px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+    
+    .section-text {
+      font-size: 1rem;
+    }
+    
+    .card-header {
+      padding: 1.2rem;
+    }
+    
+    .card-header i {
+      font-size: 1.5rem;
+    }
+    
+    .card-header h2 {
+      font-size: 1.1rem;
+    }
+    
+    .project-list {
+      padding: 1.2rem 1.2rem 1.2rem 2.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .projects-section {
+      padding: 40px 15px;
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+    }
+    
+    .tracker {
+      font-size: 0.9rem;
+    }
+    
+    .project-list li {
+      font-size: 0.95rem;
+    }
+  }

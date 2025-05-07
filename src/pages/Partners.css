@@ -1,0 +1,152 @@
+/* Partners.css - Enhanced styling for the Partners page */
+
+.partners-container {
+    background-color: #f9fafb;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .partners-content {
+    padding: 3rem 1.5rem;
+  }
+  
+  /* Header styling */
+  .partners-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+  }
+  
+  .partners-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .partners-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    border-radius: 2px;
+  }
+  
+  .partners-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Partners list styling */
+  .partners-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .partners-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Partner card styling */
+  .partner-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .partner-card:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .logo-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .partner-logo {
+    max-height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .partner-card:hover .partner-logo {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+  
+  .partner-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+    color: #1f2937;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .partners-header h1 {
+      font-size: 2rem;
+    }
+    
+    .partners-content {
+      padding: 2rem 1rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .partners-content {
+      padding: 4rem 2rem;
+    }
+    
+    .partner-card {
+      padding: 2rem;
+    }
+  }

@@ -151,6 +151,38 @@
   color: #666;
 }
 
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #e41e26;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background-color: #f8e5e5;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 1200px) {
   .left-half {
@@ -194,6 +226,11 @@
     width: 100%;
     max-width: none;
   }
+  
+  .social-icons {
+    margin-top: 15px;
+    margin-left: 0;
+  }
 }
 
 /* Mobile responsiveness modifications */
@@ -220,7 +257,7 @@
   }
   
   .text-section h1 {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Made smaller for mobile screens */
     text-align: left;
     line-height: 1.4; /* Adjusted for better spacing */
     display: flex;
@@ -233,7 +270,7 @@
   }
   
   .logo {
-    max-width: 300px;
+    max-width: 220px; /* Made smaller for mobile */
   }
   
   .contact-info {
@@ -245,6 +282,21 @@
   
   .contact-item {
     margin-right: 0;
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+  
+  .social-icon {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -258,7 +310,7 @@
   }
   
   .text-section h1 {
-    font-size: 1.4rem;
+    font-size: 0.9rem; /* Even smaller for small phones */
   }
   
   .logo {
@@ -277,11 +329,26 @@
     width: 32px;
     height: 32px;
   }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 8px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .text-section h1 {
-    font-size: 1.2rem;
+    font-size: 0.8rem; /* Very small for very small screens */
   }
   
   .left-half {

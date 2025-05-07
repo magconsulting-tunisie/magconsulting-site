@@ -144,11 +144,10 @@ section:hover .section-title::after {
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* View More Button */
-
-
 .view-more-button {
   display: inline-block;
   background-color: transparent;
@@ -156,7 +155,6 @@ section:hover .section-title::after {
   text-decoration: none;
   transition: all var(--transition-speed) ease;
 }
-
 
 /* Presentation Section */
 .presentation-section {
@@ -431,9 +429,105 @@ cite {
   text-align: right;
 }
 
+/* Trusted By Section */
+.trusted-section {
+  background: #e9f0fa; /* Light background to match the desired look */
+}
+
+/* Swiper Styles */
+.swiper-container {
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.swiper-fallback .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.client-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-speed) ease;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.client-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Fixed height for all logos */
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.logo-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logo-title {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 500;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all var(--transition-speed) ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+}
+
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(350deg, var(--background-dark), var(--primary-dark));
+  background: linear-gradient(350deg, var(--text-lighter), var(--primary-dark));
   color: white;
   padding: 70px 50px;
   margin-top: 0px;
@@ -633,6 +727,19 @@ cite {
   .cta-section {
     padding: 50px 15px;
   }
+  
+  .client-logo {
+    width: 220px;
+    height: 130px;
+  }
+  
+  .logo-image-wrapper {
+    height: 90px; /* Adjusted for smaller screens */
+  }
+  
+  .logo-title {
+    font-size: 0.85rem;
+  }
 }
 
 /* Animation Styles */
@@ -661,6 +768,7 @@ cite {
 .fadeIn {
   animation: fadeIn 0.6s ease forwards;
 }
+
 /* Full-width content for the paragraph at the top */
 .full-width-content {
   width: 100%;
