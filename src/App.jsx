@@ -31,8 +31,7 @@ function ScrollToTop() {
 function App() {
   useEffect(() => {
     const handleResize = () => {
-      document.body.style.height = '100vh';
-      window.scrollTo(0, 0);
+      
     };
     window.addEventListener('resize', handleResize);
     // Run once on mount to set initial height
