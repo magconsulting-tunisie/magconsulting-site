@@ -29,7 +29,8 @@ function Banner() {
           </div>
           <div className="contact-text">
             <div className="contact-label">Contact us</div>
-            <div className="contact-value">+216 96 111 262</div>
+            <div className="contact-value">(+216)74431511</div>
+            <div className="contact-value">(+216)96111262</div>
           </div>
         </div>
         <div className="contact-item">
@@ -43,7 +44,7 @@ function Banner() {
           </div>
           <div className="contact-text">
             <div className="contact-label">Mail</div>
-            <div className="contact-value">magconsulting17@gmail.com</div>
+            <div className="contact-value">contact@magconsulting-tunisie.com</div>
           </div>
         </div>
         <div className="social-icons">
