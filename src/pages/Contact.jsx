@@ -177,7 +177,7 @@ function Contact() {
           <div className="contact-info-grid">
             <div className="contact-info-item">
               <FaEnvelope className="info-icon" />
-              <p>Email: <a href="mailto:magconsulting17@gmail.com">magconsulting17@gmail.com</a></p>
+              <p>Email: <a href="mailto:magconsulting17@gmail.com">contact@magconsulting-tunisie.com</a></p>
             </div>
             <div className="contact-info-item">
               <FaPhone className="info-icon" />
