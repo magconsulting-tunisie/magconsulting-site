@@ -36,7 +36,7 @@ function Footer() {
       </div>
       
       <div className="footer-copyright">
-      <p>&copy; {new Date().getFullYear()} MAG Consulting. Développé par Acrecert.</p>
+      <p>&copy; {new Date().getFullYear()} MAG Consulting.  Site web développé par Acrecert.</p>
       </div>
     </footer>
   );
