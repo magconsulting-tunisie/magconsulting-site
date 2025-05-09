@@ -441,8 +441,7 @@ sociétaux.</p>
                   <div className="logo-image-wrapper">
                     <img src={adfr} alt="ADFR logo" className="logo-image" />
                   </div>
-                  <p className="logo-title">Association de Développement de
-                  la Femme Rurale</p>
+                  <p className="logo-title">ADFR</p>
                 </div>
               </div>
             </div>

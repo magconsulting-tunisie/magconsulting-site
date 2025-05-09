@@ -27,7 +27,7 @@ function Footer() {
         
         <div className="footer-column">
           <h3>Contact</h3>
-          <p>Email: magconsulting17@gmail.com</p>
+          <p>Email: contact@magconsulting-tunisie.com</p>
           <p>Téléphone:</p>
           <p>Bureau : (+216) 74431511</p>
           <p>Mobile : (+216) 99727827</p>
