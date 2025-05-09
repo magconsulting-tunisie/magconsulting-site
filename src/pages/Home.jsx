@@ -133,7 +133,7 @@ pays africains et arabes.</p>
             </div>
           </div>
           
-          <div className="image-gallery">
+          <div className="image-gallery1">
             <img 
               src={bureau1} 
               alt="Office view 1" 
