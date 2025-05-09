@@ -23,7 +23,11 @@ function Projects() {
           <h1 className="section-title">Nos Projets et Réalisations</h1>
           
           <p className="section-text">
-            Découvrez nos initiatives et réalisations dans divers domaines, visant à renforcer les capacités organisationnelles et territoriales à travers la Tunisie et au-delà.
+          Découvrez nos initiatives et
+réalisations dans des domaines
+variés, conçues pour renforcer les
+capacités organisationnelles et
+territoriales.
           </p>
           
           <div className="projects-grid">

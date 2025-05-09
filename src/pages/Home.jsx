@@ -89,23 +89,38 @@ function Home() {
         
         <div className="presentation-columns">
           <div className="expertise-cards-container">
-            <div className="expertise-card">
+            <div className="mvexpertise-card">
               <div className="expertise-icon">
                 <FaBullseye />
               </div>
               <h3>Notre Mission</h3>
-              <p>Renforcer durablement les compétences des individus et des organisations en proposant des solutions de formation, de conseil et d'accompagnement sur mesure, adaptées aux enjeux économiques, humains et technologiques d'aujourd'hui et de demain.</p>
+              <p>Renforcer durablement les
+compétences des individus et les
+performances des organisations en
+proposant des solutions de
+formation, de conseil et
+d&#39;accompagnement sur mesure,
+adaptées aux enjeux économiques,
+humains et technologiques
+d&#39;aujourd&#39;hui et de demain.</p>
             </div>
             
-            <div className="expertise-card">
+            <div className="mvexpertise-card">
               <div className="expertise-icon">
                 <FaEye />
               </div>
               <h3>Notre Vision</h3>
-              <p>Devenir un acteur de référence mondiale dans le développement des organisations et des individus, inspirant une culture d'apprentissage continu et contribuant à l'émergence et l'essor d'entreprises performantes, responsables et résilientes dans les pays africains, arabes et francophones.</p>
+              <p>Acteur de référence dans le
+développement des organisations et
+des individus, inspirant une culture
+d&#39;apprentissage continu et
+contribuant à l&#39;émergence et l&#39;essor
+d&#39;entreprises performantes,
+responsables et résilientes dans les
+pays africains et arabes.</p>
             </div>
             
-            <div className="expertise-card">
+            <div className="mvexpertise-card">
               <div className="expertise-icon">
                 <FaHeart />
               </div>
@@ -141,30 +156,35 @@ function Home() {
       <section className="intervention-section">
         <div className="section-content">
           <h2 className="section-title">Nos services</h2>
-          <p className="section-text">
-            MAG Consulting est en mesure d'aborder des problématiques complexes dans les secteurs réglementaires, 
-            la maîtrise d'ouvrage, et la gestion privée et publique.
-          </p>
-          
           <div className="intervention-cards">
             <div className="intervention-card">
               <Link to="/formations" className="view-more-button">
                 <h3>Formation</h3>
-                <p>Renforcement des capacités et développement des compétences à travers des programmes sur mesure.</p>
+                <p>Nous proposons des formations sur
+mesure, adaptées à vos besoins et
+animées par des experts pour
+renforcer les compétences de vos
+équipes.</p>
               </Link>
             </div>
             
             <div className="intervention-card">
               <Link to="/etudes" className="view-more-button">
                 <h3>Études</h3>
-                <p>Analyses approfondies et diagnostics pour orienter vos projets et stratégies.</p>
+                <p>Nos études approfondies vous
+apportent une vision claire et
+structurée pour orienter vos
+décisions stratégiques.</p>
               </Link>
             </div>
             
             <div className="intervention-card">
               <Link to="/conseil-accompagnement" className="view-more-button">
                 <h3>Conseils et accompagnement</h3>
-                <p>Assistance stratégique et opérationnelle pour optimiser vos performances et atteindre vos objectifs.</p>
+                <p>Nous vous accompagnons dans vos
+projets avec des solutions de
+conseil personnalisées, alliant expertise métier et proximité
+opérationnelle.</p>
               </Link>
             </div>
           </div>
@@ -233,7 +253,10 @@ function Home() {
                 <FaUserTie />
               </div>
               <h3>Management et Leadership</h3>
-              <p>Formations pour développer des compétences en gestion et leadership.</p>
+              <p>Développement de la capacité à
+mobiliser les équipes, prendre des
+décisions stratégiques et incarner
+un leadership inspirant.</p>
             </div>
             
             <div className="expertise-card">
@@ -272,7 +295,11 @@ function Home() {
                 <FaBalanceScale />
               </div>
               <h3>Politiques Publiques</h3>
-              <p>Analyse, développement et évaluation des politiques publiques pour maximiser leur impact social.</p>
+              <p>Analyse, développement et
+évaluation des politiques publiques
+pour améliorer l’efficacité de l’action
+publique et répondre aux enjeux
+sociétaux.</p>
             </div>
             
             <div className="expertise-card">
@@ -414,7 +441,8 @@ function Home() {
                   <div className="logo-image-wrapper">
                     <img src={adfr} alt="ADFR logo" className="logo-image" />
                   </div>
-                  <p className="logo-title">ADFR</p>
+                  <p className="logo-title">Association de Développement de
+                  la Femme Rurale</p>
                 </div>
               </div>
             </div>

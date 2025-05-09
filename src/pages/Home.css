@@ -140,9 +140,30 @@ section:hover .section-title::after {
   color: var(--text-dark);
 }
 
-.expertise-card p {
+.mvexpertise-card {
+  background-color: var(--card-dark);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  transition: all var(--transition-speed) ease;
+  text-align: center;
+  border: 1px solid rgba(77, 166, 255, 0.1);
+}
+
+.mvexpertise-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-dark);
+  border-color: var(--primary-color);
+}
+
+.mvexpertise-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-dark);
+}
+.mvexpertise-card p {
   color: var(--text-light);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   text-align: left;
 }

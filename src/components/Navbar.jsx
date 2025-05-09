@@ -73,7 +73,7 @@ function Navbar() {
             Conseil et Accompagnement
           </NavLink>
           <NavLink to="/projets" className="navbar-link">
-            Nos projets
+            Nos projets et réalisations
           </NavLink>
           <NavLink to="/partenaires" className="navbar-link">
             Nos partenaires

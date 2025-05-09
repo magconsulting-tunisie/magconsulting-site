@@ -30,7 +30,7 @@ function Banner() {
           <div className="contact-text">
             <div className="contact-label">Contact us</div>
             <div className="contact-value">(+216)74431511</div>
-            <div className="contact-value">(+216)96111262</div>
+            <div className="contact-value">(+216)99727827</div>
           </div>
         </div>
         <div className="contact-item">
