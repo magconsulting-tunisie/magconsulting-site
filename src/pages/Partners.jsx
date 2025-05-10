@@ -32,6 +32,11 @@ function Partners() {
       
       <div className="partners-content">
         <header className="partners-header">
+          <nav className="tracker">
+            <Link to="/">Accueil</Link>
+            <span>/</span>
+            Nos Partenaires
+          </nav>
           <h1>Nos Partenaires</h1>
           <p>
             Nous collaborons avec divers partenaires pour renforcer nos initiatives et offrir des solutions innovantes.
@@ -56,20 +61,6 @@ function Partners() {
         </section>
        
       </div>
-      <section className="cta-section">
-        <div className="cta-content">
-          <h2 className="cta-title">Prêt à concrétiser votre projet?</h2>
-          <p className="cta-text">Contactez-nous pour découvrir comment MAG Consulting peut vous accompagner vers le succès.</p>
-          <div className="cta-buttons">
-            <Link to="/contact">
-              <button className="cta-button primary">Demander un devis</button>
-            </Link>
-          </div>
-          <p className="cta-contact-info">
-            Ou appelez-nous directement au <strong> (+216) 99727827 /  (+216) 74431511</strong>
-          </p>
-        </div>
-      </section>
     </div>
     
   );

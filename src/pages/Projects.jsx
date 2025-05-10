@@ -17,7 +17,7 @@ function Projects() {
           <nav className="tracker">
             <Link to="/">Accueil</Link>
             <span>/</span>
-            Projets
+            Nos Projets et Réalisations
           </nav>
           
           <h1 className="section-title">Nos Projets et Réalisations</h1>
@@ -115,6 +115,20 @@ territoriales.
           </div>
         </div>
       </section>
+       <section className="cta-section">
+              <div className="cta-content">
+                <h2 className="cta-title">Prêt à concrétiser votre projet?</h2>
+                <p className="cta-text">Contactez-nous pour découvrir comment MAG Consulting peut vous accompagner vers le succès.</p>
+                <div className="cta-buttons">
+                  <Link to="/contact">
+                    <button className="cta-button primary">Demander un devis</button>
+                  </Link>
+                </div>
+                <p className="cta-contact-info">
+                  Ou appelez-nous directement au <strong> (+216) 99727827 /  (+216) 74431511</strong>
+                </p>
+              </div>
+            </section>
     </div>
   );
 }

@@ -19,6 +19,7 @@ function ConseilAccompagnement() {
             <span>/</span>
             Conseil et Accompagnement
           </nav>
+          <h2 className="section-title">Conseil et Accompagnement</h2>
           <p className="section-text">
             La société offre un accompagnement global aux personnes et aux institutions, combinant coaching, tutorat, mentorat, et appui à la transformation. Elle assiste également ses clients dans la conception de plans de formation, le montage de dossiers de financement, et la préparation à des certifications ISO. En complément, elle propose un accompagnement administratif renforcé, incluant l’aide à la régularisation de dossiers complexes auprès des administrations fiscales, sociales, douanières ou autres organismes publics, afin de garantir la conformité réglementaire et faciliter l’accès aux droits ou aux dispositifs d’appui.
           </p>

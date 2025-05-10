@@ -14,8 +14,12 @@ function Formations() {
     <div className="formations-wrapper">
       <Banner />
       <section className="formations-section">
-        <div className="section-content">
-          <h2 className="section-title">Nos Formations</h2>
+        <div className="section-content"><nav className="tracker">
+                    <Link to="/">Accueil</Link>
+                    <span>/</span>
+                    Formation
+                  </nav>
+          <h2 className="section-title">Formation</h2>
           <p className="section-text">
             La société conçoit et dispense des formations professionnelles couvrant un large spectre de compétences clés pour les organisations. Les modules proposés touchent aux domaines managérial, financier, informatique (IT), commercial, juridique, communication, qualité, sécurité et bien-être au travail. Ces formations peuvent être inter ou intra-entreprise, certifiantes ou non, et sont adaptées aux besoins spécifiques des publics visés. L’approche pédagogique intègre des formats variés (présentiel, distanciel, blended learning) et peut inclure des dispositifs d’évaluation ou de validation des acquis. L’objectif est de renforcer durablement les performances individuelles et collectives au sein des structures accompagnées.
           </p>

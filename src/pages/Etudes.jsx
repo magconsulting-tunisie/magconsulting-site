@@ -19,6 +19,7 @@ function Etudes() {
             <span>/</span>
             Études
           </nav>
+          <h2 className="section-title">Études</h2>
           <p className="section-text">
             La société réalise des études stratégiques couvrant un large éventail de domaines tels que la formation, les ressources humaines, la finance, ou encore la gestion des organisations. Elle intervient dans l’analyse des besoins en compétences, la conduite de diagnostics RH et financiers, l’évaluation de l’impact des actions menées, ainsi que dans la veille réglementaire et sectorielle. Des études spécifiques peuvent aussi porter sur la performance économique, les risques, ou l’organisation des services. La cartographie des compétences et l’analyse des écarts permettent d’orienter efficacement les décisions d’investissement en ressources humaines et matérielles.
           </p>

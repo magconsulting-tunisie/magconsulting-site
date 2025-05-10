@@ -24,6 +24,7 @@
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
+    font-family: 'Poppins', sans-serif;
   }
   
   .partners-header h1::after {
@@ -129,6 +130,7 @@
     color: #1f2937;
     line-height: 1.4;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
   }
   
   /* Responsive adjustments */

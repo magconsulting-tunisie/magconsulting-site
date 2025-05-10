@@ -40,7 +40,7 @@ function Navbar() {
           </NavLink>
           <div className="dropdown">
             <NavLink to="/formations" className="navbar-link">
-              Formation
+              Formation 
             </NavLink>
             <div className="dropdown-menu">
               <NavLink to="/formations/qualite-et-iso" className="dropdown-item">
